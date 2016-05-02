@@ -1,0 +1,32 @@
+<div class="login" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">New Account</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form accept-charset="UTF-8" role="form" ng-submit="vm.saveAccount(account)">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Account Name" ng-model="account.companyName" name="name" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Domain" ng-model="account.accountName" name="domain" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Number of Users " ng-model="account.numberOfUsers" name="users" type="number">
+                                </div>
+
+                                <input class="btn btn-lg btn-success btn-block" type="submit" value="Save Account">
+                            </fieldset>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

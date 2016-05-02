@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <span><a href="#dash/teams/new">New Team</a></span>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Topic</th>
+                        <th>Users</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- ng repeat here -->
+                    <tr ng-repeat="team in vm.teams">
+                        <td>{{team.teamName}}</td>
+                        <td>{{team.topic}}</td>
+                        <td>
+                            <ul ng-repeat="user in team.users">
+                                <li>{{user.firstName +' '+user.lastName}}</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0);" ng-click="vm.deleteTeam(team._id)">Delete</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

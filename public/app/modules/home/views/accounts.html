@@ -1,0 +1,37 @@
+<div class="accounts" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span><a href="#/dash/account/new">New Account</a></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Company</th>
+                            <th>Domain</th>
+                            <th>No. of Users</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="account in vm.accounts">
+                                <td>{{$index+1}}</td>
+                                <td>{{account.companyName}}</td>
+                                <td><a href="">{{account.accountName}}</a></td>
+                                <td>{{account.numberOfUsers}}</td>
+                                <td><a href="javascript:void(0);" class="disabled">Edit</a> <a href="javascript:void(0);" ng-click="vm.deleteAccount(account._id)">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

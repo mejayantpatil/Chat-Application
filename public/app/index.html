@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>XNet Inc.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+<section>
+    <div>
+        <div ui-view></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center hide">
+        <span class="small-txt">Copyright &copy; XNet Inc 2016</span>
+    </div>
+</footer>
+
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="app.js"></script>
+
+<script src="assets/js/checklist-model.js"></script>
+<script src="modules/login/login.module.js"></script>
+<script src="modules/home/home.module.js"></script>
+
+<script src="modules/admin/admin.module.js"></script>
+<script src="modules/admin/controllers/adminController.js"></script>
+<script src="modules/admin/services/roomsService.js"></script>
+<script src="modules/admin/services/accountsService.js"></script>
+<script src="modules/admin/services/teamService.js"></script>
+<script src="modules/admin/controllers/accountController.js"></script>
+<script src="modules/admin/controllers/roomController.js"></script>
+<script src="modules/admin/controllers/teamController.js"></script>
+
+<script src="modules/home/controllers/newUserController.js"></script>
+<script src="modules/home/controllers/userController.js"></script>
+<script src="modules/home/controllers/mainController.js"></script>
+<script src="modules/home/controllers/homeController.js"></script>
+<script src="modules/home/services/userService.js"></script>
+<script src="modules/home/services/accountService.js"></script>
+
+<script src="modules/login/controllers/loginController.js"></script>
+
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+
+<link rel="stylesheet" href="assets/css/chat.css">
+<!--<script src="assets/js/chat.js"></script>-->
+</body>
+</html>

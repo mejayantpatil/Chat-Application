@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <span><a href="#dash/rooms/new">New Room</a></span>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Room Name</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- ng repeat here -->
+                    <tr ng-repeat="room in vm.rooms">
+                        <td>{{room.roomName}}</td>
+                        <td><span ng-show="room.active">Active</span><span ng-show="!room.active">DeActive</span></td>
+                        <td><a href="javascript:void(0);" ng-click="vm.deleteRoom(room._id)">Delete</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

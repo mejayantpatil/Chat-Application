@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Accounts</div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Account Name</th>
+                                <th>Company</th>
+                                <th>No. Of Users</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- ng repeat here -->
+                            <tr ng-repeat="account in vm.accounts">
+                                <td>{{account.accountName}}</td>
+                                <td>{{account.companyName}}</td>
+                                <td>{{account.numberOfUsers}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">Users</div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- ng repeat here -->
+                            <tr ng-repeat="user in vm.users">
+                                <td>{{user.firstName}}</td>
+                                <td>{{user.lastName}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">Rooms</div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Room Name</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- ng repeat here -->
+                            <tr ng-repeat="room in vm.rooms">
+                                <td>{{room.roomName}}</td>
+                                <td><span ng-show="room.active">Active</span><span ng-show="!room.active">DeActive</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">Teams</div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Team Name</th>
+                                <th>Topic</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- ng repeat here -->
+                            <tr ng-repeat="team in vm.teams">
+                                <td>{{team.teamName}}</td>
+                                <td>{{team.topic}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

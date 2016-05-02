@@ -1,0 +1,51 @@
+<div class="login" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Register your domain</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form accept-charset="UTF-8" role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Your Company Name" name="company" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Domain" name="domain" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Users" name="users" type="number" max="10">
+                                </div>
+                                <input class="btn btn-lg btn-success btn-block" type="submit" value="Register">
+                            </fieldset>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="messages"></ul>
+    <input id="m" autocomplete="off"/>
+    <button id="btn">Send</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        $('#btn').click(function () {
+            console.log($('#m').val());
+            socket.emit('chat message', $('#m').val());
+            $('#m').val('');
+            //return false;
+
+        });
+
+        socket.on('some event', function (msg) {
+            $('#messages').append($('<li>').text(msg));
+        });
+    </script>
+
+</div>
